@@ -1,0 +1,13 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Alerts: 
+    // - Authenticated users (personnel) can read and update status
+    // - Backend (Service Account) has full access (bypasses these rules typically, but good for testing)
+    match /alerts/{alertId} {
+      allow read, update: if request.auth != null;
+      allow create: if false; // Only backend creates alerts via Admin SDK
+    }
+  }
+}

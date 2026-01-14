@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+opencv-python
+numpy
+firebase-admin
+python-dotenv
+pydantic
+aiohttp
+sounddevice
+librosa
+scipy
+python-multipart
+requests
