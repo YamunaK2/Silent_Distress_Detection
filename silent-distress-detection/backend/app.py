@@ -93,7 +93,7 @@ def monitoring_loop():
     SYSTEM_STATE["camera_status"] = "Idle"
     print("[SYSTEM] Monitoring Thread Stopped.")
 
-@app.get("/")
+@app.get("/status")
 def health_check():
     return {"status": "ok", "message": "Silent Distress Detection Backend is Ready"}
 
