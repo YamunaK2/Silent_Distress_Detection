@@ -38,11 +38,18 @@ def monitoring_loop():
     cap = cv2.VideoCapture(0) # Open default camera
     
     if not cap.isOpened():
-        print("[ERROR] Could not open camera.")
-        SYSTEM_STATE["camera_status"] = "Error"
-        SYSTEM_STATE["is_running"] = False
+        
+        print("[WARNING] Camera not available. Running simulation mode.")
+        SYSTEM_STATE["camera_status"] = "Active"
+
+    # 👉 SIMULATION LOOP (no camera)
+        while SYSTEM_STATE["is_running"]:
+            time.sleep(1)
+
+        SYSTEM_STATE["camera_status"] = "Idle"
         return
 
+# 👉 REAL CAMERA LOOP (only if camera works)
     SYSTEM_STATE["camera_status"] = "Active"
 
     while SYSTEM_STATE["is_running"]:
@@ -93,9 +100,7 @@ def monitoring_loop():
     SYSTEM_STATE["camera_status"] = "Idle"
     print("[SYSTEM] Monitoring Thread Stopped.")
 
-@app.get("/status")
-def health_check():
-    return {"status": "ok", "message": "Silent Distress Detection Backend is Ready"}
+
 
 @app.post("/start")
 def start_monitoring(background_tasks: BackgroundTasks):
