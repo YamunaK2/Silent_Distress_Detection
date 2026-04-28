@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8000";
+const API_URL = "https://silent-distress-detection.onrender.com";
 
 export const getSystemStatus = async () => {
     try {
