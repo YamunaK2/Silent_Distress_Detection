@@ -110,9 +110,11 @@ const Dashboard = () => {
                     {status.is_running ? (
                         <img
                            <img
-                            src="https://silent-distress-detection.onrender.com/video_feed"
-                            alt="Live Camera Feed"
-                            style={{ width: '100%', maxWidth: '640px', display: 'block', margin: '0 auto' }}
+                            <img
+                              src="https://silent-distress-detection.onrender.com/video_feed"
+                              alt="Live Camera Feed"
+                              style={{ width: '100%', maxWidth: '640px', display: 'block', margin: '0 auto' }}
+
                         />
                     ) : (
                         <div style={{ padding: '40px', textAlign: 'center', background: '#f0f0f0', color: '#666' }}>
