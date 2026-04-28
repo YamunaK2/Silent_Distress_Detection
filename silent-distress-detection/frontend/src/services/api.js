@@ -1,14 +1,5 @@
 const API_URL = "https://silent-distress-detection.onrender.com";
-const response = await fetch(`${API_URL}/status`);
 
-const text = await response.text();
-
-try {
-    return JSON.parse(text);
-} catch {
-    console.error("Not JSON response:", text);
-    return null;
-}
 export const getSystemStatus = async () => {
     try {
         const response = await fetch(`${API_URL}/status`);
@@ -27,7 +18,7 @@ export const startMonitoring = async () => {
     } catch (error) {
         console.error("Error starting monitoring:", error);
     }
-}
+};
 
 export const stopMonitoring = async () => {
     try {
@@ -36,4 +27,4 @@ export const stopMonitoring = async () => {
     } catch (error) {
         console.error("Error stopping monitoring:", error);
     }
-}
+};
