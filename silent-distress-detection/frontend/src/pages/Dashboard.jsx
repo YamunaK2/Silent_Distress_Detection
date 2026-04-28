@@ -109,8 +109,6 @@ const Dashboard = () => {
                 <div className="video-feed-container" style={{ marginBottom: '20px', border: '2px solid #333', borderRadius: '8px', overflow: 'hidden' }}>
                     {status.is_running ? (
                         <img
-                           <img
-                            <img
                               src="https://silent-distress-detection.onrender.com/video_feed"
                               alt="Live Camera Feed"
                               style={{ width: '100%', maxWidth: '640px', display: 'block', margin: '0 auto' }}
