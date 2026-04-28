@@ -107,18 +107,29 @@ const Dashboard = () => {
 
             <div className="control-panel">
                 <div className="video-feed-container" style={{ marginBottom: '20px', border: '2px solid #333', borderRadius: '8px', overflow: 'hidden' }}>
-                    {status.is_running ? (
-                        <img
-                              src="https://silent-distress-detection.onrender.com/video_feed"
-                              alt="Live Camera Feed"
-                              style={{ width: '100%', maxWidth: '640px', display: 'block', margin: '0 auto' }}
-
-                        />
-                    ) : (
-                        <div style={{ padding: '40px', textAlign: 'center', background: '#f0f0f0', color: '#666' }}>
-                            <p>Camera is Offline. Automatic Privacy Mode Active.</p>
-                        </div>
-                    )}
+{status.is_running ? (
+    <img
+        src="https://silent-distress-detection.onrender.com/video_feed"
+        alt="Live Camera Feed"
+        style={{
+            width: '100%',
+            maxWidth: '640px',
+            display: 'block',
+            margin: '0 auto'
+        }}
+    />
+) : (
+    <div
+        style={{
+            padding: '40px',
+            textAlign: 'center',
+            background: '#f0f0f0',
+            color: '#666'
+        }}
+    >
+        <p>Camera is Offline. Automatic Privacy Mode Active.</p>
+    </div>
+)}
                 </div>
 
                 {!status.is_running ? (
