@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AlertCard from '../components/AlertCard';
 
-const API_URL = "http://localhost:8000";
-
+const API_URL = "https://silent-distress-detection.onrender.com";
 const Alerts = () => {
     const [alerts, setAlerts] = useState([]);
 
