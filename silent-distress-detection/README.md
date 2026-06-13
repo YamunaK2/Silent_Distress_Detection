@@ -12,7 +12,7 @@ A privacy-first, edge-AI system to detect silent distress signals (micro-express
 
 ## 🛠 Tech Stack
 
-- **Backend**: Python, FastAPI, OpenCV, NumPy
+- **Backend**: Python, FastAPI, OpenCV, NumPy, TensorFlow
 - **Frontend**: React (Create React App), CSS3
 - **Database/Notification**: Google Firebase (Firestore, Cloud Messaging)
 
